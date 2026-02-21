@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Loading...</title>
+<style>
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+}
+</style>
+</head>
+<body onclick="triggerScare()">
+
+<h1 style="color:white; text-align:center; margin-top:40vh;">
+Klik untuk lanjut...
+</h1>
+
+<script>
+function triggerScare() {
+  document.body.innerHTML = "";
+
+  // GANTI URL DI BAWAH INI
+  let imageUrl = "https://files.catbox.moe/5rxkw7.jpg";
+  let soundUrl = "https://files.catbox.moe/jsffok.mp3";
+
+  let img = document.createElement("img");
+  img.src = imageUrl;
+  img.style.width = "100vw";
+  img.style.height = "100vh";
+  img.style.objectFit = "cover";
+  img.style.position = "fixed";
+  img.style.top = "0";
+  img.style.left = "0";
+  document.body.appendChild(img);
+
+  let audio = new Audio(soundUrl);
+  audio.play();
+}
+</script>
+
+</body>
+</html>
